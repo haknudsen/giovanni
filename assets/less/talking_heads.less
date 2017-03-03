@@ -26,3 +26,12 @@ article p{text-indent: 20px}
         .my_btn(lighten(@brand-primary, 10%),@brand-primary,-2px);
     }
 }
+.tier_one{
+    .tier(@dark,@brand-primary);
+}
+.tier_two{
+    .tier(lighten(@dark,5%),lighten(@brand-primary,10%));
+}
+.tier_three{
+    .tier(lighten(@dark,10%) ,lighten(@brand-primary,20%));
+}

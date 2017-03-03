@@ -25,3 +25,13 @@
   -webkit-font-smoothing: antialiased;
 }
 .margin{margin: 0 auto}
+.tier(@tColor,@tBackground){
+    background-color: @tBackground;
+    color: @tColor; 
+    margin: @margin auto;
+    padding: @my_padding;
+    border-bottom:solid 2px darken(@tBackground, 10%);
+    &:link{
+        color:@tColor;
+    }
+}

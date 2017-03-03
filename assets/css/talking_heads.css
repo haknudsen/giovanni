@@ -7104,3 +7104,33 @@ article p {
   text-shadow: 0 -2px 1px rgba(0, 0, 0, 0.52);
   -webkit-font-smoothing: antialiased;
 }
+.tier_one {
+  background-color: #337ab7;
+  color: #0f2334;
+  margin: 40px auto;
+  padding: 20px;
+  border-bottom: solid 2px #286090;
+}
+.tier_one:link {
+  color: #0f2334;
+}
+.tier_two {
+  background-color: #5094ce;
+  color: #143048;
+  margin: 40px auto;
+  padding: 20px;
+  border-bottom: solid 2px #337ab7;
+}
+.tier_two:link {
+  color: #143048;
+}
+.tier_three {
+  background-color: #78acd9;
+  color: #1a3d5c;
+  margin: 40px auto;
+  padding: 20px;
+  border-bottom: solid 2px #5094ce;
+}
+.tier_three:link {
+  color: #1a3d5c;
+}
