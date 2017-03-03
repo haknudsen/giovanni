@@ -2,8 +2,27 @@
 @import "../../3/darkly/variables.less";
 @import "../../3/darkly/bootswatch.less";
 @import "../../3/bower_components/bootstrap/less/bootstrap.less";
+@import "my_variables.less";
+@import "mixins/mine.less";
+@import "mixins/text_colors.less";
 
 .brand-logo img{max-height: 100px;margin: 0 auto}
 .nav-header{font-size:48px;font-weight: 600}
 .nav-header .phone{margin-right: 20px}
 .navbar-center{width: 25%;margin: 0 auto}
+#changeQuote::before {content: url(http://talkingheadswebsite.com/images/quotes-left.png)}
+#changeQuote::after {content: url(http://talkingheadswebsite.com/images/quotes-right.png)}
+article p{text-indent: 20px}
+.btn-custom {
+	.my_btn(@brand-primary,lighten(@brand-primary, 10%),2px);
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 10px 20px;
+    min-width: 162px;
+	max-width: 100%;
+    border-radius: @border_radius;
+    &:hover{
+        .my_btn(lighten(@brand-primary, 10%),@brand-primary,-2px);
+    }
+}

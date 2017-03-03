@@ -7021,13 +7021,13 @@ button.close {
 }
 /* Scss Document */
 .orange {
-  color: #eba73d;
+  color: $web_orange;
 }
 .white {
-  color: #ffffff !important;
+  color: $white!important;
 }
 .black {
-  color: #000000;
+  color: $black;
 }
 .light {
   color: #78acd9;
@@ -7036,7 +7036,7 @@ button.close {
   color: #1d4568;
 }
 .highlight {
-  color: #5cb85c;
+  color: $color_azure_radiance;
 }
 .primary {
   color: #337ab7;
@@ -7086,7 +7086,7 @@ article p {
   padding: 10px 20px;
   min-width: 162px;
   max-width: 100%;
-  border-radius: 8px;
+  border-radius: $border_radius;
 }
 .btn-custom:hover {
   background-color: #5094ce !important;
