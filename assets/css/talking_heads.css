@@ -7020,8 +7020,9 @@ button.close {
   margin: 0 auto;
 }
 /* Scss Document */
-.orange {
-  color: #eba73d;
+/* SText Colors */
+.invert {
+  color: #b77133;
 }
 .white {
   color: #ffffff !important;
@@ -7040,6 +7041,30 @@ button.close {
 }
 .primary {
   color: #337ab7;
+}
+/* Text Weights */
+.heavy {
+  font-weight: 700;
+}
+.light {
+  font-weight: 300;
+}
+p {
+  text-indent: 8px;
+}
+footer {
+  background: #337ab7;
+  color: #ffffff;
+  width: 100%;
+  padding: 20px;
+  font-size: 24px;
+  margin: 0 auto;
+}
+footer a {
+  color: #000000;
+}
+footer a:hover {
+  color: #ffffff;
 }
 .brand-logo img {
   max-height: 100px;
@@ -7133,4 +7158,21 @@ article p {
 }
 .tier_three:link {
   color: #1a3d5c;
+}
+.text-heading {
+  padding: 20px;
+  text-align: center;
+}
+.awards_full img {
+  max-width: 200px;
+  margin: 0 auto;
+}
+.awards_full .bbb {
+  padding-top: 20%;
+}
+.awards_full .bestwebdesign {
+  padding-top: 10%;
+}
+.awards_media .media-left {
+  width: 15%;
 }

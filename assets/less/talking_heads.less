@@ -4,8 +4,13 @@
 @import "../../3/bower_components/bootstrap/less/bootstrap.less";
 @import "my_variables.less";
 @import "mixins/mine.less";
-@import "mixins/text_colors.less";
+@import "mixins/text.less";
 
+p{text-indent: @border_radius}
+footer{background: @brand-primary;color:@white;width: 100%;padding: @my_padding;font-size: 24px;.margin;
+    a{color:@black}
+    a:hover{color:@white}
+}
 .brand-logo img{max-height: 100px;margin: 0 auto}
 .nav-header{font-size:48px;font-weight: 600}
 .nav-header .phone{margin-right: 20px}
@@ -35,3 +40,8 @@ article p{text-indent: 20px}
 .tier_three{
     .tier(lighten(@dark,10%) ,lighten(@brand-primary,20%));
 }
+.text-heading{padding: @my_padding;text-align: center}
+.awards_full img{max-width: 200px;.margin}
+.awards_full .bbb{padding-top: 20%}
+.awards_full .bestwebdesign{padding-top: 10%}
+.awards_media .media-left{width: 15%}

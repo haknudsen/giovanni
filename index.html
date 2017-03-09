@@ -5,81 +5,88 @@
 <title>Person on Website</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./assets/css/custom.min.css">
 <link href="assets/css/talking_heads.css" rel="stylesheet" type="text/css">
 </head>
 <body id="home">
- <nav class="navbar navbar-default navbar-fixed-top">
-	   
-  <div class="container-fluid">
-
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid"> 
+    
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       <h1 class="nav-header">Person on Website</h1>
     </div>
-
+    
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav" id="logo">
         <li><a href="http://talkingheads.com/affiliate/">
-      <div class="brand-logo"><img src="assets/img/logo.png" alt="Talking Heads Video"/></div>
-      </a></li>
+          <div class="brand-logo"><img src="assets/img/logo.png" alt="Talking Heads Video"/></div>
+          </a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-      <h1 class="nav-header"><a class="phone" href="tel://801-748-2281" title="Give us a call.">801-748-2281</a></h1>
+          <h1 class="nav-header"><a class="phone" href="tel://801-748-2281" title="Give us a call.">801-748-2281</a></h1>
         </li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <!-- /.container-fluid --> 
 </nav>
 <section class="splash">
   <div class="container">
-    <div class="row">
-    </div>
+    <div class="row"> </div>
   </div>
 </section>
 <section class="tier_one">
-  <div class="container"><h1 class="text-center">Tier-One</h1> </div>
+  <div class="container">
+    <h1 class="text-center">Tier-One</h1>
+  </div>
 </section>
 <section class="tier_two">
-  <div class="container"><h1 class="text-center">Tier-Two</h1> </div>
+  <div class="container">
+    <h1 class="text-center">Tier-Two</h1>
+  </div>
 </section>
 <section class="tier_three">
-  <div class="container"><h1 class="text-center">Tier-Three</h1> </div>
+  <div class="container">
+    <h1 class="text-center">Tier-Three</h1>
+  </div>
 </section>
 <section class="section-preview">
   <div class="container">
-    <button type="button" class="btn btn-custom">Test Button</button> </div>
+    <button type="button" class="btn btn-custom">Test Button</button>
+  </div>
 </section>
-
+<section class="container" id="awards"></section>
 <!-- start footer -->
-<section class="container-fluid">
-  <footer class="footer">
-    <div class="row">
-      <div class="large-12 columns text-center">
-        <p>Copyright <span id="year">TEXT</span> Person on Website - All Rights Reserved.</p>
-        <p><a href="http://talkingheads.com/affiliate/">Part of the Talking Heads<sup>&reg;</sup> Network</a></p>
-      </div>
+<footer>
+  <div class="row">
+    <div class="large-12 columns text-center">
+      <p>Copyright <span id="year">TEXT</span> Person on Website - All Rights Reserved.</p>
+      <p><a href="http://talkingheads.com/affiliate/">Part of the Talking Heads<sup>&reg;</sup> Network</a></p>
     </div>
-  </footer>
-</section>
+  </div>
+</footer>
 <!-- end footer --> 
 <!-- jQuery --> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
 <script src="./bower_components/tether/dist/js/tether.min.js"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 <script src="./assets/js/custom.js"></script> 
-<script src="./assets/js/countdown.js"></script>
-<script src="./assets/js/mine.js"></script>
+<script src="./assets/js/countdown.js"></script> 
+<script src="./assets/js/mine.js"></script> 
 <script>
+$(document).ready(function(){
+    $("#awards").load('includes/awards-media.php');
+    $(".footer").ready(function(){
+        $('.award').setHeight();
+		});
+    });
 </script>
 </body>
 </html>
