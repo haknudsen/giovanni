@@ -7173,6 +7173,20 @@ article p {
 .awards_full .bestwebdesign {
   padding-top: 10%;
 }
+.awards_media .media-heading {
+  font-weight: 700;
+}
 .awards_media .media-left {
   width: 15%;
+}
+.awards_media .media-right {
+  width: 15%;
+}
+.pattern-background {
+  /* degree of turn, base color, percent lighter */
+  background: linear-gradient(45deg, #337ab7, #3c87c8, #337ab7, #3c87c8, #337ab7, #3c87c8, #337ab7, #3c87c8, #337ab7);
+  background: -webkit-linear-gradient(45deg, #337ab7, #3c87c8, #337ab7, #3c87c8, #337ab7, #3c87c8, #337ab7, #3c87c8, #337ab7);
+  background-size: 20px 20px;
+  padding: 20px;
+  color: #ffffff;
 }

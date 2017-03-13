@@ -35,3 +35,10 @@
         color:@tColor;
     }
 }
+.pattern(@degree, @color1, @percent){
+    @color2: lighten(@color1, @percent);
+    background: linear-gradient(@degree, @color1, @color2, @color1, @color2, @color1, @color2, @color1, @color2, @color1);
+    background: -webkit-linear-gradient(@degree, @color1, @color2, @color1, @color2, @color1, @color2, @color1, @color2, @color1);
+    background-size:20px 20px;
+    padding: @my_padding;
+}
