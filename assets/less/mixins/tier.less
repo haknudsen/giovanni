@@ -1,0 +1,15 @@
+/* LESS Document */
+.tier(@tColor,@tBackground){
+    background-color: @tBackground;
+    color: @tColor; 
+    border-bottom:solid 2px darken(@tBackground, 10%);
+    &:link{
+        color:@tColor;
+    }
+}
+
+.alert-tier-one { background-color: #91AA9D; color: #000 }
+.alert-tier-two { background-color: #D1DBBD; color: #193441 }
+.alert-tier-three { background-color: #fcfff5; color: #3E606F }
+.alert-tier-four { background-color: rgba(0,114,255,0.2); color: #014fae }
+.alert-tier-one a, .alert-tier-two a, .alert-tier-three a, .alert--tier-four a{color: black}

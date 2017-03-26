@@ -1,0 +1,44 @@
+/* Scss Document */
+
+.invert{
+    color: spin(@brand-primary, 180);
+    &{
+        color: spin(@brand-primary, 180);
+    }
+}
+.white {
+	color: @white!important;
+    &{
+	color: @white!important;
+    }
+}
+.black{
+    color: @black;
+    &{
+        color: @black;
+    }
+}
+.light {
+	color: lighten(@brand-primary,20%);
+    &{
+        color: lighten(@brand-primary,20%);
+    }
+}
+.light {
+	color: darken(@brand-primary,20%);
+    &{
+        color: darken(@brand-primary,20%);
+    }
+}
+.highlight {
+	color: @brand-success;
+    &{
+        color: @brand-success;
+    }
+}
+.primary {
+	color: @brand-primary;
+    &{
+        color: @brand-primary;
+    }
+}
