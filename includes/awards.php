@@ -1,6 +1,7 @@
 <div class="text-heading awards_full">
     <h2><span class="invert">OUR</span> <strong class="primary">AWARDS</strong></h2>
-    <h3>Website Talking Heads has earned numerous Awards over the years. As well as an A+ Rating from the Better Business Bureau</h3>
+    <h3 class="subheader">Website Talking Heads has earned numerous Awards over the years.</h3>
+    <h3 class="subheader">As well as an A+ Rating from the Better Business Bureau</h3>
     <div class="row">
         <div class="col-lg-3">
             <h4 class="primary heavy">#1 Video Production</h4>

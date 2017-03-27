@@ -7,14 +7,6 @@
 @import "mixins/text.less";
 
 p{text-indent: @border_radius}
-footer{background: @brand-primary;color:@white;width: 100%;padding: @my_padding;font-size: 24px;.margin;
-    a{color:@black}
-    a:hover{color:@white}
-}
-.brand-logo img{max-height: 100px;margin: 0 auto}
-.nav-header{font-size:48px;font-weight: 600}
-.nav-header .phone{margin-right: 20px}
-.navbar-center{width: 25%;margin: 0 auto}
 #changeQuote::before {content: url(http://talkingheadswebsite.com/images/quotes-left.png)}
 #changeQuote::after {content: url(http://talkingheadswebsite.com/images/quotes-right.png)}
 article p{text-indent: 20px}
@@ -54,3 +46,19 @@ article p{text-indent: 20px}
     .pattern(45deg, @brand-primary, 5%);
     color: @white;
 }
+.navbar {min-height: 80px}
+.navbar-header{padding-top: 6px}
+.navbar-nav{font-size: @font-size-large}
+.navbar-brand a{font-size: @font-size-h1;color: @brand-dark}
+.navbar-right{padding-right: 10px}
+.navbar-mine{padding-top: 10px}
+.navbar-nav{
+	@media (min-width : 900px) and (max-width:1199px){font-size: 16px}
+}
+footer{background: @brand-primary;color:@white;width: 100%;padding: @my_padding;font-size: 24px;.margin;border-top: thin solid @brand-dark;
+    a{color:@black}
+    a:hover{color:@white}
+}
+.footer-title{text-align: center;color:@brand-light}
+.contact-info{font-size: @font-size-h2;text-align: center}
+.subheader{color: @brand-primary;margin: 10px auto}
