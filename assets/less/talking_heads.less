@@ -5,6 +5,8 @@
 @import "my_variables.less";
 @import "mixins/mine.less";
 @import "mixins/text.less";
+@import "slider.less";
+
 
 p{text-indent: @border_radius}
 #changeQuote::before {content: url(http://talkingheadswebsite.com/images/quotes-left.png)}
@@ -15,38 +17,25 @@ article p{text-indent: 20px}
 	font-size: 14px;
 	text-transform: uppercase;
 	font-weight: 700;
-	padding: 10px 20px;
-    min-width: 162px;
-	max-width: 100%;
-    border-radius: @border_radius;
-    &:hover{
-        .my_btn(lighten(@brand-primary, 10%),@brand-primary,-2px);
-    }
+	padding: 10px 20px;min-width: 162px;
+	max-width: 100%;border-radius: @border_radius;&:hover{    .my_btn(lighten(@brand-primary, 10%),@brand-primary,-2px);}
 }
-.tier_one{
-    .tier(@dark,@brand-primary);
+.tier_one{.tier(@dark,@brand-primary);
 }
-.tier_two{
-    .tier(lighten(@dark,5%),lighten(@brand-primary,10%));
+.tier_two{.tier(lighten(@dark,5%),lighten(@brand-primary,10%));
 }
-.tier_three{
-    .tier(lighten(@dark,10%) ,lighten(@brand-primary,20%));
+.tier_three{.tier(lighten(@dark,10%) ,lighten(@brand-primary,20%));
 }
 .text-heading{padding: @my_padding;text-align: center}
 .awards_full img{max-width: 200px;.margin}
 .awards_full .bbb{padding-top: 20%}
 .awards_full .bestwebdesign{padding-top: 10%}
-.awards_media{
-    .media-heading{font-weight: 700}
-    .media-left{width: 15%};
-    .media-right{width: 15%};
+.awards_media{.media-heading{font-weight: 700}.media-left{width: 15%};.media-right{width: 15%};
 }
-.pattern-background{
-    /* degree of turn, base color, percent lighter */
-    .pattern(45deg, @brand-primary, 5%);
-    color: @white;
+.pattern-background{/* degree of turn, base color, percent lighter */.pattern(45deg, @brand-primary, 5%);color: @white;
 }
-.navbar {min-height: 80px}
+.navbar {min-height: 80px;margin: 0;padding-top: 10px}
+.nav-pad{min-height:80px}
 .navbar-header{padding-top: 6px}
 .navbar-nav{font-size: @font-size-large}
 .navbar-brand a{font-size: @font-size-h1;color: @brand-dark}
@@ -55,10 +44,15 @@ article p{text-indent: 20px}
 .navbar-nav{
 	@media (min-width : 900px) and (max-width:1199px){font-size: 16px}
 }
-footer{background: @brand-primary;color:@white;width: 100%;padding: @my_padding;font-size: 24px;.margin;border-top: thin solid @brand-dark;
-    a{color:@black}
-    a:hover{color:@white}
+footer{background: @brand-primary;color:@white;width: 100%;padding: @my_padding;font-size: 24px;.margin;border-top: thin solid @brand-dark;a{color:@black}a:hover{color:@white}
 }
 .footer-title{text-align: center;color:@brand-light}
 .contact-info{font-size: @font-size-h2;text-align: center}
 .subheader{color: @brand-primary;margin: 10px auto}
+//-------------------------preloader
+.loader{position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 99;background: url('../img/loading-screen.jpg') 50% 50% no-repeat rgb(249,249,249);}
+.loader-container {width: 600px;height: 200px;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;text-align: center;
+}
+.container-full {margin: 0 auto;width: 100%;min-height: 100%;background: url('../img/loading-screen.jpg');color: #eee;overflow: hidden;
+}
+//-------------------------------
