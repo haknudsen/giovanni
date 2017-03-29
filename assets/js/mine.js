@@ -1,19 +1,19 @@
 // JavaScript Document
 $(document).ready(function () {
     "use strict";
+    $(window).resize(function(){headerSpacing();});
+    $("#headerHolder").css("display", "none");
     var progress = setInterval(function () {
         var $bar = $("#bar"),
-            p = 100;
-        if ($bar.width() >= 600) {
+            p = 0;
+        if ($bar.width() >= 100) {
             clearInterval(progress);
-        pageLoaded();
+            pageLoaded();
         } else {
-            p = parseInt($bar.width() / 6);
-
-            $bar.text("loading ... " + p + "%");
-            $bar.width($bar.width() + 600);
+            p = parseInt($bar.width());
+            $bar.text(p + "%");
+            $bar.width($bar.width() + 100);
         }
-        $bar.text("loading ... " + p + "%");
     }, 1);
     $('#headerHolder').load('includes/header.html');
     $('#quote').load('./includes/Request-Quote.php');
@@ -37,51 +37,56 @@ $(document).ready(function () {
         $('#timer').countdown({
             until: launchDay
         });
-        var windowWidth = $(window).width();
-        if (windowWidth > 767) {
-            var headerWidth = $('.nav-container').outerWidth();
-            var leftWidth = $('.navbar-brand').outerWidth();
-            var centerWidth = $('.navbar-mine').outerWidth();
-            var rightWidth = $('.navbar-right').outerWidth();
-            if (windowWidth > 991) {
-                var pad = (headerWidth - leftWidth - centerWidth - rightWidth) / 2;
-                $('.navbar-mine').css('padding-left', pad);
-            } else {
-                $('.navbar-brand').css('padding-left', (windowWidth - leftWidth) / 2 + 'px');
-                $('.navbar-mine').css('padding-left', (windowWidth - centerWidth) / 2 + 'px');
-                $('.navbar-right').css('padding-right', (windowWidth - rightWidth) / 2 + 'px');
-            }
-        }
     });
 
     function pageLoaded() {
-        $(".loader").fadeOut(1000, function(){
+        $(".loader").fadeOut(1000, function () {
             console.log('faded');
-        $('#slider-1').css("color", "red");
-        switch (getAbsolutePath()) {
-            case 'specials':
-                $('#specials').addClass('active');
-                break;
-            case 'spokespeople':
-                $('#spokespeople').addClass('active');
-                break;
-            case 'Custom_Video_Presentation':
-                $('#presentations').addClass('active');
-                break;
-            case 'Website_Spokesperson':
-                $('#web').addClass('active');
-                break;
-            case 'specials':
-                $('#specials').addClass('active');
-                break;
-            case 'home':
-                $('#home').addClass('active');
-                break;
-        }
-            
+            $("#headerHolder").css("display", "block");
+            headerSpacing();
+            $('h1').css("color", "red");
+            switch (getAbsolutePath()) {
+                case 'specials':
+                    $('#specials').addClass('active');
+                    break;
+                case 'spokespeople':
+                    $('#spokespeople').addClass('active');
+                    break;
+                case 'Custom_Video_Presentation':
+                    $('#presentations').addClass('active');
+                    break;
+                case 'Website_Spokesperson':
+                    $('#web').addClass('active');
+                    break;
+                case 'specials':
+                    $('#specials').addClass('active');
+                    break;
+                case 'home':
+                    $('#home').addClass('active');
+                    break;
+            }
+
         });
     }
+function headerSpacing() {
+    var windowWidth = $(window).width();
+    if (windowWidth > 767) {
+        var headerWidth = $('.nav-container').outerWidth();
+        var leftWidth = $('.navbar-brand').outerWidth();
+        var centerWidth = $('.navbar-mine').outerWidth();
+        var rightWidth = $('.navbar-right').outerWidth();
+        if (windowWidth > 991) {
+            var pad = (headerWidth - leftWidth - centerWidth - rightWidth) / 2;
+            $('.navbar-mine').css('padding-left', pad);
+        } else {
+            $('.navbar-brand').css('padding-left', (windowWidth - leftWidth) / 2 + 'px');
+            $('.navbar-mine').css('padding-left', (windowWidth - centerWidth) / 2 + 'px');
+            $('.navbar-right').css('padding-right', (windowWidth - rightWidth) / 2 + 'px');
+        }
+    }
+}
 });
+
 $.fn.onAvailable = function (fn) {
     "use strict";
     var sel = this.selector;

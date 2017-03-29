@@ -1,0 +1,38 @@
+/* LESS Document */
+.slider-top{position:absolute;top:85px;left:100px;width:500px;height:120px;z-index:0;border-radius: @border_radius;border: thin solid @black;background:fade(@black,60%);}
+.slider-top .header{position:absolute;top:15px;left:@border_radius;width:500px;height:40px;z-index:0;font-size:30px;color:@brand-light;line-height:40px;}
+.slider-top .subheader{position:absolute;top:60px;left:@border_radius;width:480px;height:40px;z-index:0;font-size:22px;color:#ffffff;line-height:38px;}
+.slider-content { position: absolute; top: 220px; left: 100px; width: 500px; z-index: 0;background:fade(@brand-light,80%); padding: 10px;border-radius: @border_radius;border: thin solid @brand-light;height: 300px}
+.slider-content .header{position:absolute;top:15px;left:@border_radius;width:500px;height:40px;z-index:0;font-size:30px;color:@gray-darker;line-height:40px}
+.slider-content .content{left:@border_radius;position:absolute;top:60px;left:15px;z-index:0;font-size:22px;color:@black;line-height:38px;font-size: 18px;line-height: 1.2em;padding-right: 5px}
+.slider-image{position: absolute;top:160px;right:100px;width: 33%;height: 300px;border-radius: @border_radius;border: thin solid @white;background:fade(@white,60%)}
+
+.jssorl-oval{position:absolute;top:0px;left:0px;text-align:center;background-color:rgba(0,0,0,0.7);}
+.jssorl-oval img { animation-name: jssorl-oval; animation-duration: 1.2s; animation-iteration-count: infinite; animation-timing-function: linear;margin-top:-19.0px;position:relative;top:50%;width:38px;height:38px;}
+ @keyframes jssorl-oval {
+ from {
+ transform: rotate(0deg);
+}
+ to {
+ transform: rotate(360deg);
+}
+}
+.jssorb05 { position: absolute; }
+.jssorb05 div, .jssorb05 div:hover, .jssorb05 .av { position: absolute;
+width: 16px; height: 16px; background: url('../img/slider/b05.png') no-repeat; overflow: hidden; cursor: pointer; }
+.jssorb05 div { background-position: -7px -7px; }
+.jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+.jssorb05 .av { background-position: -67px -7px; }
+.jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+.jssora22l, .jssora22r { display: block; position: absolute; /* size of arrow element */
+width: 40px; height: 58px; cursor: pointer; background: url('../img/slider/a22.png') center center no-repeat; overflow: hidden; }
+.jssora22l { background-position: -10px -31px; }
+.jssora22r { background-position: -70px -31px; }
+.jssora22l:hover { background-position: -130px -31px; }
+.jssora22r:hover { background-position: -190px -31px; }
+.jssora22l.jssora22ldn { background-position: -250px -31px; }
+.jssora22r.jssora22rdn { background-position: -310px -31px; }
+.jssora22l.jssora22lds { background-position: -10px -31px; opacity: .3; pointer-events: none; }
+.jssora22r.jssora22rds { background-position: -70px -31px; opacity: .3; pointer-events: none; }
+#jssor_1{position:relative;margin:0 auto;top:0px;left:0px;width:1500px;height:600px;overflow:hidden;visibility:hidden;}
+.slides{cursor:default;position:relative;top:0px;left:0px;width:1500px;height:600px;overflow:hidden;}

@@ -9,9 +9,9 @@
 
 
 p{text-indent: @border_radius}
+article p{text-indent: @border_radius+(@border_radius/2)}
 #changeQuote::before {content: url(http://talkingheadswebsite.com/images/quotes-left.png)}
 #changeQuote::after {content: url(http://talkingheadswebsite.com/images/quotes-right.png)}
-article p{text-indent: 20px}
 .btn-custom {
 	.my_btn(@brand-primary,lighten(@brand-primary, 10%),2px);
 	font-size: 14px;
@@ -49,10 +49,10 @@ footer{background: @brand-primary;color:@white;width: 100%;padding: @my_padding;
 .footer-title{text-align: center;color:@brand-light}
 .contact-info{font-size: @font-size-h2;text-align: center}
 .subheader{color: @brand-primary;margin: 10px auto}
-//-------------------------preloader
-.loader{position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 99;background: url('../img/loading-screen.jpg') 50% 50% no-repeat rgb(249,249,249);}
-.loader-container {width: 600px;height: 200px;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;text-align: center;
-}
-.container-full {margin: 0 auto;width: 100%;min-height: 100%;background: url('../img/loading-screen.jpg');color: #eee;overflow: hidden;
-}
+//-------------------------preloader progressbar
+.loader{position: fixed;left: 0;top:0;width: 100%;min-height: 100%;z-index: 99;background: url('../img/loading-screen.jpg') top center no-repeat rgb(249,249,249);}
+.loader-container {width: 100px;height: 200px;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;text-align: center}
+.container-full {margin: 0 auto;width: 100%;min-height: 100%;background: url('../img/loading-screen.jpg');color: #eee;overflow: hidden}
+.loading-text{color:@white;font-weight: 300}
+.loader-container .progress-bar{padding-top:5px}
 //-------------------------------
