@@ -34,17 +34,25 @@ article p{text-indent: @border_radius+(@border_radius/2)}
 }
 .pattern-background{/* degree of turn, base color, percent lighter */.pattern(45deg, @brand-primary, 5%);color: @white;
 }
-.navbar {min-height: 80px;margin: 0;padding-top: 10px}
-.nav-pad{min-height:80px}
-.navbar-header{padding-top: 6px}
+//------------------------------------------------------------navbar
+.navbar {min-height: @navbar-height;margin: 0;padding: 0}
+.nav-pad{min-height:@navbar-height}
 .navbar-nav{font-size: @font-size-large}
 .navbar-brand a{font-size: @font-size-h1;color: @brand-dark}
 .navbar-right{padding-right: 10px}
-.navbar-mine{padding-top: 10px}
+.navbar-mine{padding: 0;height: @navbar-height}
+.navbar-mine li{height: @navbar-height}
 .navbar-nav{
 	@media (min-width : 900px) and (max-width:1199px){font-size: 16px}
 }
-footer{background: @brand-primary;color:@white;width: 100%;padding: @my_padding;font-size: 24px;.margin;border-top: thin solid @brand-dark;a{color:@black}a:hover{color:@white}
+.active{border: thin solid fade(@brand-primary,50%);
+    a{color:@white;}
+}
+#specials a{color:@brand-success}
+.phone{margin-top: -10px}
+//------------------------------------footer
+footer{background: @brand-primary;color:@white;width: 100%;padding: @my_padding;font-size: 24px;.margin;border-top: thin solid @brand-dark;
+    a{color:@black}a:hover{color:@white}
 }
 .footer-title{text-align: center;color:@brand-light}
 .contact-info{font-size: @font-size-h2;text-align: center}
