@@ -45,12 +45,30 @@ $(document).ready(function () {
         var year = d.getFullYear();
         $("#year").text(year);
         //----countdown
-        var currentDate = new Date();
-        var month = currentDate.getMonth() + 3;
-        $("#year").text(year);
-        var launchDay = new Date(2017, month + 2, 7);
-        $("#timer").countdown({
-            until: launchDay
+        var endDate, male, female;
+        $.ajax({
+            type: "GET",
+            url: "http://www.websitetalkingheads.com/featuredactor/featuredactor.xml",
+            dataType: "xml",
+            success: function (xml) {
+                male = xml.getElementsByTagName('male')[0].innerHTML;
+                female = xml.getElementsByTagName('female')[0].innerHTML;
+                endDate = xml.getElementsByTagName('newdate')[0].innerHTML;
+                var saleEnd = endDate.split(' ');
+                var m = saleEnd[0];
+                var months = ["January", "February", "March", "April", "May", "June", "July",  "August", "September", "October", "November", "December"];
+                var month = (months.indexOf(m) + 1); 
+                var day = saleEnd[1].slice(0,-2);
+                var launchDay = new Date();
+                launchDay.setMonth(month,day);
+                console.log(month);
+                $("#timer").countdown({
+                    until: launchDay
+                });
+            },
+            error: function (err) {
+                console.log(err);
+            }
         });
     });
 
@@ -59,10 +77,8 @@ $(document).ready(function () {
             $("#headerHolder").css("display", "block");
             headerSpacing();
             var pageName = getAbsolutePath();
-            console.log(pageName);
-            switch(pageName){
+            switch (pageName) {
                 case "home":
-                    console.log('home');
                     $(".navbar-mine #home").addClass("active");
                     break;
                 case "specials":
